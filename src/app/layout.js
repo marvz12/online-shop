@@ -1,5 +1,15 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
+import HeaderTop from "@/components/HeaderTop";
+import HeaderMain from "@/components/HeaderMain";
+import NavBAr from "@/components/NavBAr";
+import MobNavBar from "@/components/MobNavBar";
+import Footer from "@/components/Footer";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -11,7 +21,13 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <HeaderTop />
+        <HeaderMain />
+        <NavBAr />
+        <MobNavBar />
+        {children}</body>
+        <Footer />
     </html>
   );
 }
